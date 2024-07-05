@@ -7,12 +7,6 @@ import { LoginComponent } from "./login/login.component";
 
 const routes: Routes = [
   {
-    path: 'signin', loadChildren: () => import('./auth/signin/signin.module').then(m => m.SigninModule)
-  },
-  {
-    path: 'signup', loadChildren: () => import('./auth/signup/signup.module').then(m => m.SignupModule)
-  },
-  {
     path: 'pass-reset', loadChildren: () => import('./auth/pass-reset/pass-reset.module').then(m => m.PassResetModule)
   },
   {

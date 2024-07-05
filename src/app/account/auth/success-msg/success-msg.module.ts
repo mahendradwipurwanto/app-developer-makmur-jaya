@@ -5,12 +5,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 // Component
 import { SuccessMsgRoutingModule } from "./success-msg-routing.module";
-import { CoverComponent } from './cover/cover.component';
 import { BasicComponent } from './basic/basic.component';
 
 @NgModule({
   declarations: [
-    CoverComponent,
     BasicComponent
   ],
   imports: [

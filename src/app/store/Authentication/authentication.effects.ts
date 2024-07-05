@@ -29,7 +29,7 @@ export class AuthenticationEffects {
   this.actions$.pipe(
     ofType(login),
     exhaustMap(({ email, password }) => {
-      if (environment.defaultauth === "fakebackend") {
+      if (environment.google_client_id === "fakebackend") {
         return this.AuthenticationService.login(email, password).pipe(
           map((user) => {
             if (user.status === 'success') {
@@ -42,7 +42,7 @@ export class AuthenticationEffects {
           }),
           catchError((error) => of(loginFailure({ error })), // Closing parenthesis added here
         ));
-      } else if (environment.defaultauth === "firebase") {
+      } else if (environment.google_client_id === "firebase") {
         return of(); // Return an observable, even if it's empty
       } else {
         return of(); // Return an observable, even if it's empty
