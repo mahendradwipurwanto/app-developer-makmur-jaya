@@ -1,4 +1,12 @@
 {
+  "LIGHT": "Light",
+  "DARK": "Dark",
+  "LANGUAGE": "Language",
   "MENU": "Menu",
-  "DASHBOARD": "Dashboard"
+  "DASHBOARD": "Dashboard",
+  "THEME": "Theme",
+  "GUEST": "Guest",
+  "GUESTBOOK": "Guest Book",
+  "DONATION": "Donation",
+  "SETTINGS": "Settings"
 }

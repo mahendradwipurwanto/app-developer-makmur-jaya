@@ -12,6 +12,30 @@ export const MENU: MenuItem[] = [
         icon: 'ri-dashboard-line',
         link: '/',
     },
+    {
+        id: 3,
+        label: 'THEME',
+        icon: 'ri-paint-brush-line',
+        link: '/theme',
+    },
+    {
+        id: 4,
+        label: 'GUESTBOOK',
+        icon: 'ri-book-open-line',
+        link: '/guest',
+    },
+    {
+        id: 5,
+        label: 'DONATION',
+        icon: 'ri-gift-2-line',
+        link: '/donation',
+    },
+    {
+        id: 6,
+        label: 'SETTINGS',
+        icon: 'ri-settings-line',
+        link: '/settings',
+    },
     // {
     //     id: 8,
     //     label: 'MENUITEMS.APPS.TEXT',

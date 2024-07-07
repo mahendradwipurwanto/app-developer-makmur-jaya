@@ -1,4 +1,12 @@
 {
+  "LIGHT": "Terang",
+  "DARK": "Gelap",
+  "LANGUAGE": "Bahasa",
   "MENU": "Menu",
-  "DASHBOARD": "Dasbor"
+  "DASHBOARD": "Dasbor",
+  "THEME": "Tema",
+  "GUEST": "Tamu",
+  "GUESTBOOK": "Buku Tamu",
+  "DONATION": "Donasi",
+  "SETTINGS": "Pengaturan"
 }

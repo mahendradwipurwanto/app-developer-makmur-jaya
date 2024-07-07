@@ -12,7 +12,6 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 // Component pages
 import { LayoutComponent } from './layout.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HorizontalComponent } from './horizontal/horizontal.component';
 import { HorizontalTopbarComponent } from './horizontal-topbar/horizontal-topbar.component';
@@ -26,7 +25,6 @@ import lottie from 'lottie-web';
   declarations: [
     LayoutComponent,
     TopbarComponent,
-    SidebarComponent,
     FooterComponent,
     HorizontalComponent,
     HorizontalTopbarComponent,
