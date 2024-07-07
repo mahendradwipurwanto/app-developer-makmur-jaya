@@ -11,20 +11,19 @@ import {
 
 import {NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
 
-import {ToastsContainer} from './login/toasts-container.component';
+import {ToastsContainer} from './sign-in/toasts-container.component';
 
 // called environment.ts
 import {environment} from '../../environments/environment';
 
 import {AccountRoutingModule} from './account-routing.module';
-import {RegisterComponent} from './register/register.component';
-import {LoginComponent} from './login/login.component';
-import {en} from "@fullcalendar/core/internal-common";
+import {SignUpComponent} from './sign-up/sign-up.component';
+import {SignInComponent} from './sign-in/sign-in.component';
 
 @NgModule({
     declarations: [
-        RegisterComponent,
-        LoginComponent,
+        SignUpComponent,
+        SignInComponent,
         ToastsContainer
     ],
     imports: [

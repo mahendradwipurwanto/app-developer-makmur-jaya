@@ -9,6 +9,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CountUpModule } from 'ngx-countup';
 
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -17,14 +18,15 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     BreadcrumbsComponent,
    
   ],
-  imports: [
-    CommonModule,
-    NgbNavModule,
-    NgbAccordionModule,
-    NgbDropdownModule,
-    SlickCarouselModule,
-    CountUpModule,
-  ],
+    imports: [
+        CommonModule,
+        NgbNavModule,
+        NgbAccordionModule,
+        NgbDropdownModule,
+        SlickCarouselModule,
+        CountUpModule,
+        TranslateModule,
+    ],
   exports: [
     BreadcrumbsComponent,
   ]

@@ -14,7 +14,6 @@ import {CookieService} from 'ngx-cookie-service';
 import {LanguageService} from '../../core/services/language.service';
 import {TranslateService} from '@ngx-translate/core';
 import {allNotification, messages} from './data'
-import {CartModel} from './topbar.model';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -23,7 +22,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent implements OnInit {
-    messages: any
+    messages: any;
     element: any;
     mode: string | undefined;
     @Output() mobileMenuButtonClicked = new EventEmitter();
@@ -33,7 +32,6 @@ export class TopbarComponent implements OnInit {
     countryName: any;
     cookieValue: any;
     userData: any;
-    cartData!: CartModel[];
     total = 0;
     cart_length: any = 0;
     totalNotify: number = 0;
@@ -41,13 +39,21 @@ export class TopbarComponent implements OnInit {
     @ViewChild('removenotification') removenotification !: TemplateRef<any>;
     notifyId: any;
 
-    constructor(@Inject(DOCUMENT) private document: any, private eventService: EventService, public languageService: LanguageService, private modalService: NgbModal,
-                public _cookiesService: CookieService, public translate: TranslateService, private authService: AuthenticationService, private authFackservice: AuthfakeauthenticationService,
-                private router: Router, private TokenStorageService: TokenStorageService) {
+    constructor(
+        @Inject(DOCUMENT)
+        private document: any,
+        private eventService: EventService,
+        public languageService: LanguageService,
+        private modalService: NgbModal,
+        public _cookiesService: CookieService,
+        public translate: TranslateService,
+        private router: Router,
+        private tokenService: TokenStorageService
+    ) {
     }
 
     ngOnInit(): void {
-        this.userData = this.TokenStorageService.getUser();
+        this.userData = this.tokenService.getUser();
         this.element = document.documentElement;
 
         // Cookies wise Language set
@@ -63,9 +69,8 @@ export class TopbarComponent implements OnInit {
         }
 
         // Fetch Data
-        this.allnotifications = allNotification;
-
         this.messages = messages;
+        this.allnotifications = allNotification;
     }
 
     /**
@@ -118,7 +123,6 @@ export class TopbarComponent implements OnInit {
      * @param content modal content
      */
     openModal(content: any) {
-        // this.submitted = false;
         this.modalService.open(content, {centered: true});
     }
 
@@ -147,13 +151,7 @@ export class TopbarComponent implements OnInit {
      */
     listLang = [
         {text: 'English', flag: 'assets/images/flags/us.svg', lang: 'en'},
-        {text: 'Española', flag: 'assets/images/flags/spain.svg', lang: 'es'},
-        {text: 'Deutsche', flag: 'assets/images/flags/germany.svg', lang: 'de'},
-        {text: 'Italiana', flag: 'assets/images/flags/italy.svg', lang: 'it'},
-        {text: 'русский', flag: 'assets/images/flags/russia.svg', lang: 'ru'},
-        {text: '中国人', flag: 'assets/images/flags/china.svg', lang: 'ch'},
-        {text: 'français', flag: 'assets/images/flags/french.svg', lang: 'fr'},
-        {text: 'Arabic', flag: 'assets/images/flags/ar.svg', lang: 'ar'},
+        {text: 'Indonesia', flag: 'assets/images/flags/id.svg', lang: 'id'},
     ];
 
     /***
@@ -169,9 +167,9 @@ export class TopbarComponent implements OnInit {
     /**
      * Logout the user
      */
-    logout() {
-        this.authService.logout();
-        this.router.navigate(['/auth/login']);
+    signOut() {
+        this.tokenService.signOut();
+        this.router.navigate(['/auth/sign-in']);
     }
 
     windowScroll() {

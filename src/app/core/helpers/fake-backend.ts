@@ -22,7 +22,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return user.email === request.body.email && user.password === request.body.password;
                 });
                 if (filteredUsers.length) {
-                    // if login details are valid return 200 OK with user details and fake jwt token
+                    // if sign-in details are valid return 200 OK with user details and fake jwt token
                     const user = filteredUsers[0];
                     const body = {
                         id: user.id,
@@ -71,8 +71,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 }
             }
 
-            // register user
-            if (request.url.endsWith('/users/register') && request.method === 'POST') {
+            // sign-up user
+            if (request.url.endsWith('/users/sign-up') && request.method === 'POST') {
                 // get new user object from post body
                 const newUser = request.body;
 

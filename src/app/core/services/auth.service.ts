@@ -34,7 +34,7 @@ export class AuthenticationService {
     }
 
     /**
-     * Performs the register
+     * Performs the sign-up
      * @param email email
      * @param password password
      */

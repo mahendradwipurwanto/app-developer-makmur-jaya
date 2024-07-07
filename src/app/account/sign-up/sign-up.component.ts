@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
 
 /**
  * Register Component
  */
-export class RegisterComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   // Login Form
   signupForm!: UntypedFormGroup;
@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
       (data: any) => {
       this.successmsg = true;
       if (this.successmsg) {
-        this.router.navigate(['/auth/login']);
+        this.router.navigate(['/auth/sign-in']);
       }
     },
     (error: any) => {
@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
     //   return;
     // } else {
     //   if (environment.defaultauth === 'firebase') {
-    //     this.authenticationService.register(this.f['email'].value, this.f['password'].value).then((res: any) => {
+    //     this.authenticationService.sign-up(this.f['email'].value, this.f['password'].value).then((res: any) => {
     //       this.successmsg = true;
     //       if (this.successmsg) {
     //         this.router.navigate(['']);
@@ -78,13 +78,13 @@ export class RegisterComponent implements OnInit {
     //         this.error = error ? error : '';
     //       });
     //   } else {
-    //     this.userService.register(this.signupForm.value)
+    //     this.userService.sign-up(this.signupForm.value)
     //       .pipe(first())
     //       .subscribe(
     //         (data: any) => {
     //           this.successmsg = true;
     //           if (this.successmsg) {
-    //             this.router.navigate(['/auth/login']);
+    //             this.router.navigate(['/auth/sign-in']);
     //           }
     //         },
     //         (error: any) => {

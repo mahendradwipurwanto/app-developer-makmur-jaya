@@ -7,7 +7,7 @@ import { CoverComponent } from "./cover/cover.component";
 
 const routes: Routes = [
   {
-    path: "basic",
+    path: "page404",
     component: BasicComponent
   },
   {

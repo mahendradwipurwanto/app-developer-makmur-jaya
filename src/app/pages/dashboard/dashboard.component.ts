@@ -21,8 +21,7 @@ export class DashboardComponent implements OnInit {
     * BreadCrumb
     */
    this.breadCrumbItems = [
-     { label: 'Dashboards' },
-     { label: 'Dashboard', active: true }
+     { label: 'DASHBOARD', active: true }
    ];
  }
 }

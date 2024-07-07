@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-basic',
+  selector: 'app-page404',
   templateUrl: './basic.component.html',
   styleUrls: ['./basic.component.scss']
 })

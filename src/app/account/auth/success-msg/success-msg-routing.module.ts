@@ -6,7 +6,7 @@ import { BasicComponent } from "./basic/basic.component";
 
 const routes: Routes = [
   {
-    path: "basic",
+    path: "page404",
     component: BasicComponent
   },
 ];

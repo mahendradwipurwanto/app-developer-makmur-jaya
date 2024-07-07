@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AltComponent } from './alt.component';
+import { Page404Component } from './page404.component';
 
-describe('AltComponent', () => {
-  let component: AltComponent;
-  let fixture: ComponentFixture<AltComponent>;
+describe('BasicComponent', () => {
+  let component: Page404Component;
+  let fixture: ComponentFixture<Page404Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AltComponent ]
+      declarations: [ Page404Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AltComponent);
+    fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

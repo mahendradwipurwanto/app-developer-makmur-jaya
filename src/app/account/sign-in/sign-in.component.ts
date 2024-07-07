@@ -9,17 +9,18 @@ import {SocialUser} from "@abacritt/angularx-social-login";
 import {environment} from '../../../environments/environment';
 import {AuthenticationService} from '../../core/services/auth.service';
 import {ToastService} from './toast-service';
+import {TokenStorageService} from "../../core/services/token-storage.service";
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+    selector: 'app-sign-in',
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['./sign-in.component.scss']
 })
 
 /**
  * Login Component
  */
-export class LoginComponent implements OnInit {
+export class SignInComponent implements OnInit {
 
     // Login Form
     loginForm!: UntypedFormGroup;
@@ -34,12 +35,13 @@ export class LoginComponent implements OnInit {
     loggedIn!: boolean;
 
     constructor(
-        private formBuilder: UntypedFormBuilder,
+        public toastService: ToastService,
         private authenticationService: AuthenticationService,
         private router: Router,
         private route: ActivatedRoute,
-        public toastService: ToastService,
-        private authService: SocialAuthService
+        private authService: SocialAuthService,
+        private tokenService: TokenStorageService,
+        private formBuilder: UntypedFormBuilder
     ) {
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
@@ -54,16 +56,20 @@ export class LoginComponent implements OnInit {
         if (sessionStorage.getItem('currentUser')) {
             this.router.navigate(['/']);
         }
+
         this.loginForm = this.formBuilder.group({
-            email: ['admin@themesbrand.com', [Validators.required, Validators.email]],
-            password: ['123456', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', Validators.required]
         });
 
-
         this.authService.authState.subscribe((user) => {
-            console.log("user", user)
             this.user = user;
             this.loggedIn = (user != null);
+            this.tokenService.saveUser(user);
+            this.tokenService.saveToken(user.provider == 'FACEBOOK' ? user.authToken : user.idToken);
+
+            // redirect to dashboard
+            this.router.navigate(['/']);
         });
 
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
