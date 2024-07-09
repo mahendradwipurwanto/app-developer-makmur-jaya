@@ -6,19 +6,19 @@
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="javascript:void(0);" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="assets/images/logo-sm.png" alt="">
+                            <img src="assets/images/logo-sm.png" alt="{{ 'DEFAULT.LOGO' | translate }}">
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/images/logo-dark.png" alt="">
+                            <img src="assets/images/logo-dark.png" alt="{{ 'DEFAULT.LOGO' | translate }}">
                         </span>
                     </a>
 
                     <a href="javascript:void(0);" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="assets/images/logo-sm.png" alt="">
+                            <img src="assets/images/logo-sm.png" alt="{{ 'DEFAULT.LOGO' | translate }}">
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/images/logo-light.png" alt="">
+                            <img src="assets/images/logo-light.png" alt="{{ 'DEFAULT.LOGO' | translate }}">
                         </span>
                     </a>
                 </div>
@@ -35,7 +35,8 @@
                 <!-- App Search-->
                 <form class="app-search d-none d-md-block">
                     <div class="position-relative">
-                        <input type="text" class="form-control form-control-sm" placeholder="Search..." autocomplete="off"
+                        <input type="text" class="form-control form-control-sm" placeholder="{{ 'SEARCH.PLACEHOLDER' | translate }}"
+                               autocomplete="off"
                                id="search-options" value="" (keyup)="Search()">
                         <span class="mdi mdi-magnify search-widget-icon"></span>
                         <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
@@ -45,7 +46,7 @@
                         <ngx-simplebar style="max-height: 320px;">
                             <!-- item-->
                             <div class="dropdown-header">
-                                <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
+                                <h6 class="text-overflow text-muted mb-0 text-uppercase">{{ 'SEARCH.RECENT_SEARCH' | translate }}</h6>
                             </div>
 
                             <div class="dropdown-item bg-transparent text-wrap">
@@ -121,7 +122,7 @@
                         </ngx-simplebar>
 
                         <div class="text-center pt-3 pb-1">
-                            <a href="pages/search-results" class="btn btn-primary btn-sm">View All Results <i
+                            <a href="pages/search-results" class="btn btn-primary btn-sm">{{ 'VIEW_ALL' | translate }} <i
                                     class="ri-arrow-right-line ms-1"></i></a>
                         </div>
                     </div>
@@ -141,7 +142,7 @@
                         <form class="p-3">
                             <div class="form-group m-0">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search ..."
+                                    <input type="text" class="form-control" placeholder="{{ 'SEARCH.PLACEHOLDER' | translate }}"
                                            aria-label="Recipient's username">
                                     <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i>
                                     </button>
@@ -152,7 +153,9 @@
                 </div>
 
                 <div class="dropdown topbar-head-dropdown ms-1 me-3 header-item" ngbDropdown>
-                    <button type="button" class="btn btn-outline-primary btn-label btn-sm waves-effect waves-light rounded-pill text-truncate w-150-px" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                    <button type="button"
+                            class="btn btn-outline-primary btn-label btn-sm waves-effect waves-light rounded-pill text-truncate w-150-px"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
                         <i class="ri-honour-line label-icon align-middle rounded-pill fs-16 me-2"></i>
                         Undangan Pernikahan Mahendra & Ajeng
                     </button>
@@ -160,25 +163,28 @@
                         <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h6 class="m-0 fw-semibold fs-15"> Your Invitations </h6>
+                                    <h6 class="m-0 fw-semibold fs-15"> {{ 'DEFAULT.INVITATION.TOP_BAR' | translate }} </h6>
                                 </div>
-<!--                                <div class="col-auto">-->
-<!--                                    <a href="javascript:void(0);" class="btn btn-sm btn-soft-info"> View All Apps-->
-<!--                                        <i class="ri-arrow-right-s-line align-middle"></i></a>-->
-<!--                                </div>-->
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-soft-info">
+                                        {{ 'DEFAULT.CREATE_NEW' | translate }}
+                                        <i class="ri-add-line align-middle"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <ngx-simplebar style="max-height: 300px;">
                             <div class="p-2">
                                 <div class="d-block dropdown-item text-wrap px-3 py-2 pointer" id="data">
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/images/brands/github.png" class="me-3 avatar-sm p-2 bg-light" alt="user-pic">
+                                        <img src="assets/images/brands/github.png" class="me-3 avatar-sm p-2 bg-light"
+                                             alt="user-pic">
                                         <div class="flex-grow-1">
                                             <h6 class="mt-0 mb-1 fs-14 text-truncate w-200-px">
                                                 <span class="text-reset">Undangan Pernikahan Mahendra & Ajeng</span>
                                             </h6>
                                             <p class="mb-0 fs-12 text-muted">
-                                                <span class="fw-bold me-2">Wedding</span>
+                                                <span class="fw-bold me-2">{{ 'INVITATION.TYPE.WEDDING' | translate }}</span>
                                                 <span class="text-muted">12 Jan 2024</span>
                                             </p>
                                         </div>
@@ -211,7 +217,7 @@
                             aria-expanded="false">
                         <i class='bx bx-bell fs-22'></i>
                         <span class="position-absolute topbar-badge fs-10 translate-middle badge rounded-pill bg-danger">3<span
-                                class="visually-hidden">unread messages</span></span>
+                                class="visually-hidden">{{ 'MESSAGE.UNREAD' | translate }}</span></span>
                     </button>
                     <div ngbDropdownMenu class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                          aria-labelledby="page-header-notifications-dropdown">
@@ -220,11 +226,11 @@
                             <div class="p-3">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h6 class="m-0 fs-16 fw-semibold text-white"> Notifications </h6>
+                                        <h6 class="m-0 fs-16 fw-semibold text-white"> {{ 'NOTIFICATION.LABEL' | translate }} </h6>
                                     </div>
                                     <div class="col-auto dropdown-tabs">
                                         <span class="badge bg-light-subtle text-body fs-13"> {{ allnotifications?.length }}
-                                            New</span>
+                                            {{ 'DEFAULT.NEW' | translate }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +240,7 @@
                                     class="nav nav-tabs dropdown-tabs nav-tabs-custom" id="notificationItemsTab">
                                     <li [ngbNavItem]="1">
                                         <a ngbNavLink>
-                                            All ({{ allnotifications?.length }})
+                                            {{ 'DEFAULT.ALL' | translate }} ({{ allnotifications?.length }})
                                         </a>
                                         <ng-template ngbNavContent>
                                             <div class="tab-pane fade show active py-2 ps-2" id="all-noti-tab"
@@ -297,9 +303,7 @@
                                                                          class="img-fluid" alt="user-pic">
                                                                 </div>
                                                                 <div class="text-center pb-5 mt-2">
-                                                                    <h6 class="fs-18 fw-semibold lh-base">Hey! You have
-                                                                        no any
-                                                                        notifications </h6>
+                                                                    <h6 class="fs-18 fw-semibold lh-base">{{ 'NOTIFICATION.NO_NOTIFICATION' | translate }} </h6>
                                                                 </div>
                                                             </div>
                                                         }
@@ -307,8 +311,7 @@
                                                             <div class="my-3 text-center">
                                                                 <button type="button"
                                                                         class="btn btn-soft-success waves-effect waves-light">
-                                                                    View
-                                                                    All Notifications <i
+                                                                    {{ 'NOTIFICATION.VIEW_ALL' | translate }} <i
                                                                         class="ri-arrow-right-line align-middle"></i>
                                                                 </button>
                                                             </div>
@@ -322,7 +325,7 @@
                                     </li>
                                     <li [ngbNavItem]="2">
                                         <a ngbNavLink>
-                                            Messages
+                                            {{ 'MESSAGE.LABEL' | translate }}
                                         </a>
                                         <ng-template ngbNavContent>
                                             <div class="tab-pane fade show active py-2 ps-2" id="all-noti-tab"
@@ -367,9 +370,7 @@
                                                                          class="img-fluid" alt="user-pic">
                                                                 </div>
                                                                 <div class="text-center pb-5 mt-2">
-                                                                    <h6 class="fs-18 fw-semibold lh-base">Hey! You have
-                                                                        no any
-                                                                        notifications </h6>
+                                                                    <h6 class="fs-18 fw-semibold lh-base">{{ 'MESSAGE.NO_MESSAGE' | translate }} </h6>
                                                                 </div>
                                                             </div>
                                                         }
@@ -377,8 +378,7 @@
                                                             <div class="my-3 text-center">
                                                                 <button type="button"
                                                                         class="btn btn-soft-success waves-effect waves-light">
-                                                                    View
-                                                                    All Messages <i
+                                                                    {{ 'MESSAGE.VIEW_ALL' | translate }} <i
                                                                         class="ri-arrow-right-line align-middle"></i>
                                                                 </button>
                                                             </div>
@@ -392,7 +392,7 @@
                                     </li>
                                     <li [ngbNavItem]="3">
                                         <a ngbNavLink>
-                                            Alerts
+                                            {{ 'ALERT.LABEL' | translate }}
                                         </a>
                                         <ng-template ngbNavContent>
                                             <div class="tab-pane p-4" id="alerts-tab" role="tabpanel"
@@ -402,8 +402,7 @@
                                                          alt="user-pic">
                                                 </div>
                                                 <div class="text-center pb-5 mt-2">
-                                                    <h6 class="fs-18 fw-semibold lh-base">Hey! You have no any
-                                                        notifications </h6>
+                                                    <h6 class="fs-18 fw-semibold lh-base">{{ 'ALERT.NO_ALERT' | translate }} </h6>
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -422,13 +421,13 @@
 
                         <div class="notification-actions" id="notification-actions">
                             <div class=" d-flex text-muted justify-content-center">
-                                Select
+                                {{ 'DEFAULT.SELECT' | translate }}
                                 <div id="select-content" class="text-body fw-semibold px-1">{{ checkedValGet.length }}
                                 </div>
-                                Result
+                                {{ 'DEFAULT.RESULT' | translate }}
                                 <button type="button" class="btn btn-link link-danger p-0 ms-3" data-bs-toggle="modal"
                                         (click)="openModal(removenotification)"
-                                        data-bs-target="#removeNotificationModal">Remove
+                                        data-bs-target="#removeNotificationModal">{{ 'DEFAULT.REMOVE' | translate }}
                                 </button>
                             </div>
                         </div>
@@ -436,19 +435,23 @@
                 </div>
 
                 <div class="dropdown ms-1 topbar-head-dropdown header-item" ngbDropdown>
-                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
-                        @if(flagvalue === undefined){
+                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                        @if (flagvalue === undefined) {
                             <img src="{{valueset}}" alt="Header Language" height="20" class="rounded">
-                        }@else {
+                        } @else {
                             <img src="{{flagvalue}}" alt="Header Language" height="20" class="rounded">
                         }
                     </button>
                     <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
 
                         <!-- item-->
-                        @for(item of listLang;track $index){
-                            <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="eng" (click)="setLanguage(item.text, item.lang, item.flag)" [ngClass]="{'active': cookieValue === item.lang}">
-                                <img src="{{item.flag}}" alt="user-image" class="me-2 rounded" height="18"> <span class="align-middle">{{item.text}}</span>
+                        @for (item of listLang; track $index) {
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language py-2"
+                               data-lang="eng" (click)="setLanguage(item.text, item.lang, item.flag)"
+                               [ngClass]="{'active': cookieValue === item.lang}">
+                                <img src="{{item.flag}}" alt="user-image" class="me-2 rounded" height="18"> <span
+                                    class="align-middle">{{ item.text }}</span>
                             </a>
                         }
                     </div>
@@ -470,24 +473,24 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
                         <!-- item-->
-                        <h6 class="dropdown-header">Welcome {{ userData.firstName }}!</h6>
+                        <h6 class="dropdown-header">{{ 'DEFAULT.WELCOME' | translate }} {{ userData.firstName }}!</h6>
                         <a class="dropdown-item" routerLink="/profile">
                             <i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>
-                            <span class="align-middle">Profile</span>
+                            <span class="align-middle">{{ 'PROFILE.LABEL' | translate }}</span>
                         </a>
                         <a class="dropdown-item" routerLink="/profile/settings">
                             <i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i>
-                            <span class="align-middle">Settings</span>
+                            <span class="align-middle">{{ 'PROFILE.SETTINGS' | translate }}</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" routerLink="/help-center">
-                            <span class="badge bg-success-subtle text-success mt-1 float-end">New</span>
+                            <span class="badge bg-success-subtle text-success mt-1 float-end">{{ 'DEFAULT.NEW' | translate }}</span>
                             <i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i>
-                            <span class="align-middle">Help</span>
+                            <span class="align-middle">{{ 'HELP_CENTER.HELP' | translate }}</span>
                         </a>
                         <a class="dropdown-item" href="javascript: void(0);" (click)="signOut()">
                             <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
-                            <span class="align-middle" data-key="t-logout">Logout</span>
+                            <span class="align-middle" data-key="t-logout">{{ 'AUTH.SIGN_OUT' | translate }}</span>
                         </a>
                     </div>
                 </div>
@@ -509,16 +512,16 @@
                 <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
                            colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
                 <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                    <h4>Are you sure ?</h4>
-                    <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                    <h4>{{ 'NOTIFICATION.ARE_YOU_SURE' | translate }}</h4>
+                    <p class="text-muted mx-4 mb-0">{{ 'NOTIFICATION.DELETE_ALL' | translate }}</p>
                 </div>
             </div>
             <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
                 <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal"
-                        (click)="modal.dismiss('Cross click')">Close
+                        (click)="modal.dismiss('Cross click')">{{ 'DEFAULT.CLOSE' | translate }}
                 </button>
                 <button type="button" class="btn w-sm btn-danger" id="delete-notification"
-                        (click)="notificationDelete()">Yes, Delete It!
+                        (click)="notificationDelete()">{{ 'NOTIFICATION.DELETE' | translate }}
                 </button>
             </div>
         </div>

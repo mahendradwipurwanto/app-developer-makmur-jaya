@@ -2,11 +2,153 @@
   "LIGHT": "Light",
   "DARK": "Dark",
   "LANGUAGE": "Language",
-  "MENU": "Menu",
-  "DASHBOARD": "Dashboard",
-  "THEME": "Theme",
-  "GUEST": "Guest",
-  "GUESTBOOK": "Guest Book",
-  "DONATION": "Donation",
-  "SETTINGS": "Settings"
+  "CUSTOM_DOMAIN": "Custom Domain",
+  "CHANGE_THEME": "Change Theme",
+  "AUTH": {
+    "TITLE": "Sign in to continue to Aweddy.",
+    "SIGN_IN": "Sign In",
+    "SIGN_UP": "Sign Up",
+    "SIGN_OUT": "Sign Out",
+    "FORGOT_PASSWORD": "Forgot Password",
+    "REMEMBER_ME": "Remember Me",
+    "OR_SIGN": "or Sign In with",
+    "DONT_HAVE_ACCOUNT": "Don't have an account?"
+  },
+  "FIELD": {
+    "REQUIRED": "Required",
+    "EMAIL": {
+      "LABEL": "Email",
+      "PLACEHOLDER": "Enter your email address",
+      "REQUIRED": "Email is required",
+      "VALID": "Email must be a valid email address"
+    },
+    "PASSWORD": {
+      "LABEL": "Password",
+      "PLACEHOLDER": "Enter your password",
+      "REQUIRED": "Password is required",
+      "VALID": "Password must be a valid email address"
+    },
+    "CONFIRM_PASSWORD": {
+      "LABEL": "Confirm Password",
+      "PLACEHOLDER": "Enter your password confirmation",
+      "REQUIRED": "Confirm Password is required",
+      "VALID": "Confirm Password must be a valid email address"
+    }
+  },
+  "HELP_CENTER": {
+    "HELP": "Help",
+    "CONTACT_US": "Contact Us",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "TERMS_OF_SERVICE": "Terms of Service"
+  },
+  "MENU": {
+    "LABEL": "Menu",
+    "DASHBOARD": "Dashboard",
+    "THEME": "Theme",
+    "GUEST": "Guest",
+    "GUESTBOOK": "Guest Book",
+    "DONATION": "Donation",
+    "SETTINGS": "Settings"
+  },
+  "SEARCH": {
+    "RECENT_SEARCH": "Recent Search",
+    "VIEW_ALL": "View All Results",
+    "PLACEHOLDER": "Search..."
+  },
+  "MESSAGE": {
+    "LABEL": "Message",
+    "UNREAD": "Unread Message",
+    "NO_MESSAGE": "Hey! You have no messages",
+    "VIEW_ALL": "View All Messages"
+  },
+  "NOTIFICATION": {
+    "LABEL": "Notifications",
+    "NO_NOTIFICATION": "Hey! You have no notifications",
+    "VIEW_ALL": "View All Notifications",
+    "ARE_YOU_SURE": "Are you sure?",
+    "DELETE_ALL": "Are you sure you want to remove this Notification?",
+    "DELETE": "Yes, Delete It!"
+  },
+  "ALERT": {
+    "LABEL": "Alerts",
+    "NO_ALERT": "Hey! You have no alerts",
+    "VIEW_ALL": "View All Alerts"
+  },
+  "PROFILE": {
+    "LABEL": "Profile",
+    "SETTINGS": "Settings"
+  },
+  "DEFAULT": {
+    "LOGO": "Logo",
+    "WELCOME": "Welcome",
+    "SELECT": "Select",
+    "RESULT": "Result",
+    "NEW": "New",
+    "ALL": "All",
+    "CLOSE": "Close",
+    "REMOVE": "Remove",
+    "CREATE": "Create",
+    "UPDATE": "Update",
+    "DELETE": "Delete",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "YES": "Yes",
+    "NO": "No",
+    "EDIT": "Edit",
+    "CREATE_NEW": "Create New",
+    "UPDATE_DETAILS": "Update Details",
+    "DELETE_CONFIRM": "Delete Confirmation",
+    "INVITATION": {
+      "TOP_BAR": "Your Invitation",
+      "TYPE": "Invitation Type",
+      "DOMAIN": "Domain"
+    },
+    "START": "Start",
+    "END": "End",
+    "UPGRADE": "Upgrade"
+  },
+  "TIME": {
+    "DAY": "Day",
+    "DAYS": "Days",
+    "HOUR": "Hour",
+    "HOURS": "Hours",
+    "MINUTE": "Minute",
+    "MINUTES": "Minutes",
+    "SECOND": "Second",
+    "SECONDS": "Seconds"
+  },
+  "PACKAGE": {
+    "UPGRADE_ACCOUNT": "Upgrade Account!",
+    "FREE": {
+      "LABEL": "Free"
+    },
+    "REMINDER": {
+      "ALERT": "Your free trial expired in",
+      "UPGRADE": "Upgrade your plan from a"
+    }
+  },
+  "COUNTDOWN": {
+    "CARD_TITLE": "Countdown to Your"
+  },
+  "INVITATION": {
+    "CARD": {
+      "CUSTOM_DOMAIN": "Custom Domain",
+      "CUSTOM_THEME": "Custom Theme"
+    },
+    "LABEL": {
+      "WEDDING": "Wedding",
+      "BIRTHDAY": "Birthday",
+      "OTHER": "Other"
+    },
+    "TYPE": {
+      "WEDDING": "Wedding Invitation",
+      "BIRTHDAY": "Birthday Invitation",
+      "OTHER": "Other Invitation"
+    }
+  },
+  "EVENT": {
+    "LABEL": "Event",
+    "CHANGE_EVENT": "Change Event Sessions",
+    "NO_LOCATION": "Location not yet defined"
+  }
 }

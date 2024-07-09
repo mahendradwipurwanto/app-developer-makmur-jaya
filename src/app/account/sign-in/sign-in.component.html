@@ -22,7 +22,7 @@
                                 <img src="assets/images/logo-light.png" alt="">
                             </a>
                         </div>
-                        <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
+                        <p class="mt-3 fs-15 fw-medium">A Wedding day come true, with us</p>
                     </div>
                 </div>
             </div>
@@ -34,25 +34,25 @@
 
                         <div class="card-body p-4">
                             <div class="text-center mt-2">
-                                <h5 class="text-primary">Welcome Back !</h5>
-                                <p class="text-muted">Sign in to continue to Ngodingin.</p>
+                                <p class="text-muted">{{ 'AUTH.TITLE' | translate }}</p>
                             </div>
                             <div class="p-2 mt-4">
                                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
                                     <div class="mb-3">
-                                        <label class="form-label" for="username">Email</label>
+                                        <label class="form-label" for="email">
+                                            {{ 'FIELD.EMAIL.LABEL' | translate }}
+                                        </label>
                                         <input type="email" class="form-control" id="email" formControlName="email"
                                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
-                                               placeholder="Enter email">
+                                               placeholder="{{ 'FIELD.EMAIL.PLACEHOLDER' | translate }}">
                                         @if (submitted && f['email'].errors) {
                                             <div class="invalid-feedback">
                                                 @if (f['email'].errors['required']) {
-                                                    <div>Email is required</div>
+                                                    <div>{{ 'FIELD.EMAIL.REQUIRED' | translate }}</div>
                                                 }
                                                 @if (f['email'].errors['email']) {
-                                                    <div>Email must be a valid email address
-                                                    </div>
+                                                    <div>{{ 'FIELD.EMAIL.VALID' | translate }}</div>
                                                 }
                                             </div>
                                         }
@@ -60,12 +60,15 @@
 
                                     <div class="mb-3">
                                         <div class="float-end">
-                                            <a routerLink="/" class="text-muted">Forgot password?</a>
+                                            <a routerLink="/"
+                                               class="text-muted">{{ 'AUTH.FORGOT_PASSWORD' | translate }}</a>
                                         </div>
-                                        <label class="form-label" for="password-input">Password</label>
+                                        <label class="form-label"
+                                               for="password-input">{{ 'FIELD.PASSWORD.LABEL' | translate }}</label>
                                         <div class="position-relative auth-pass-inputgroup mb-3">
                                             <input [type]="fieldTextType ? 'text' : 'password'"
-                                                   class="form-control pe-5" placeholder="Enter password"
+                                                   class="form-control pe-5"
+                                                   placeholder="{{ 'FIELD.PASSWORD.PLACEHOLDER' | translate }}"
                                                    id="password-input" formControlName="password"
                                                    [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
                                             <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
@@ -75,7 +78,7 @@
                                             @if (submitted && f['password'].errors) {
                                                 <div class="invalid-feedback">
                                                     @if (f['password'].errors['required']) {
-                                                        <span>Password is required</span>
+                                                        <span>{{ 'FIELD.PASSWORD.REQUIRED' | translate }}</span>
                                                     }
                                                 </div>
                                             }
@@ -85,16 +88,19 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value=""
                                                id="auth-remember-check">
-                                        <label class="form-check-label" for="auth-remember-check">Remember me</label>
+                                        <label class="form-check-label"
+                                               for="auth-remember-check">{{ 'AUTH.REMEMBER_ME' | translate }}</label>
                                     </div>
 
                                     <div class="mt-4">
-                                        <button class="btn btn-success w-100" type="submit">Sign In</button>
+                                        <button class="btn btn-success w-100"
+                                                type="submit">{{ 'AUTH.SIGN_IN' | translate }}
+                                        </button>
                                     </div>
 
                                     <div class="mt-4 text-center">
                                         <div class="signin-other-title">
-                                            <h5 class="fs-13 mb-4 title">Sign In with</h5>
+                                            <h5 class="fs-13 mb-4 title">{{ 'AUTH.OR_SIGN' | translate }}</h5>
                                         </div>
                                         <div class="d-flex gap-2 justify-content-center">
                                             <button type="button" (click)="signInWithFB()"
@@ -112,9 +118,9 @@
                     <!-- end card -->
 
                     <div class="mt-4 text-center">
-                        <p class="mb-0">Don't have an account ? <a routerLink="/auth/register"
-                                                                   class="fw-semibold text-primary text-decoration-underline">
-                            Signup </a></p>
+                        <p class="mb-0">{{ 'AUTH.DONT_HAVE_ACCOUNT' | translate }} <a routerLink="/auth/register"
+                                                                                      class="fw-semibold text-primary text-decoration-underline">
+                            {{ 'AUTH.SIGN_UP' | translate }} </a></p>
                     </div>
 
                 </div>
@@ -131,8 +137,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <p class="mb-0 text-muted">&copy; {{ year }} Ngodingin. Crafted with <i
-                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                        <p class="mb-0 text-muted">&copy; {{ year }} Aweddy. Crafted with <i
+                                class="mdi mdi-heart text-danger"></i> by Ngodingin Indonesia</p>
                     </div>
                 </div>
             </div>

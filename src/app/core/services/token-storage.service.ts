@@ -10,8 +10,10 @@ export class TokenStorageService {
     constructor() {
     }
 
-    signOut(): void {
+    public signOut(): void {
         window.sessionStorage.clear();
+        window.sessionStorage.removeItem(USER_KEY);
+        window.sessionStorage.removeItem(TOKEN_KEY);
     }
 
     public saveToken(token: string): void {

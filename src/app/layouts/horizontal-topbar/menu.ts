@@ -3,36 +3,36 @@ import {MenuItem} from './menu.model';
 export const MENU: MenuItem[] = [
     {
         id: 1,
-        label: 'MENU',
+        label: 'MENU.LABEL',
         isTitle: true
     },
     {
         id: 2,
-        label: 'DASHBOARD',
+        label: 'MENU.DASHBOARD',
         icon: 'ri-dashboard-line',
         link: '/',
     },
     {
         id: 3,
-        label: 'THEME',
+        label: 'MENU.THEME',
         icon: 'ri-paint-brush-line',
         link: '/theme',
     },
     {
         id: 4,
-        label: 'GUESTBOOK',
+        label: 'MENU.GUESTBOOK',
         icon: 'ri-book-open-line',
         link: '/guest',
     },
     {
         id: 5,
-        label: 'DONATION',
+        label: 'MENU.DONATION',
         icon: 'ri-gift-2-line',
         link: '/donation',
     },
     {
         id: 6,
-        label: 'SETTINGS',
+        label: 'MENU.SETTINGS',
         icon: 'ri-settings-line',
         link: '/settings',
     },

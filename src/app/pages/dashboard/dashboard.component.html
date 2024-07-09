@@ -1,3 +1,389 @@
 <!-- Start Breadcrumbs -->
-<app-breadcrumbs title="{{ 'DASHBOARD' | translate}}" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<app-breadcrumbs title="{{ 'MENU.DASHBOARD' | translate}}" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
 <!-- End Breadcrumbs -->
+<div class="row">
+    <div class="col-xxl-4">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card ribbon-box border shadow-none mb-lg-0 material-shadow">
+                    <div class="ribbon ribbon-primary round-shape fw-semibold">{{ data.invitation.type | translate }}</div>
+                    <div class="card-overlay-image overflow-hidden">
+                        <img class="card-img-top img-fluid"
+                             src="https://storage.wedew.id/uploads/public/662/61e/75c/thumb_2381872_400_300_0_0_auto.png"
+                             alt="Card image cap">
+                        <h5 class="overlay-text mb-0"><i
+                                class="ri-checkbox-blank-circle-fill text-success me-2"></i> {{ data.invitation.domain | translate }}
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group">
+                            <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                <div class="float-end">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="ri-global-fill"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="list-title fs-15 mb-1">{{ "CUSTOM_DOMAIN" | translate }}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                <div class="float-end">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="ri-paint-brush-line"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="list-title fs-15 mb-1">{{ "CHANGE_THEME" | translate }}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <small class="text-muted text-uppercase">{{ "EVENT.LABEL" | translate }}</small>
+                        </div>
+                        <div class="mt-3 row no-gutters">
+                            <div class="col-auto text-center" style="width: 100px">
+                                <h1 class="display-5 fw-bolder mb-0">22</h1>
+                                Jul 2024
+                            </div>
+                            <div class="col pl-3" style="border-left: 1px solid #dadada">
+                                <div class="d-flex flex-column justify-content-center h-100">
+                                    <div class="row no-gutters">
+                                        <strong>Sample Event</strong>
+                                    </div>
+                                    <div class="row no-gutters mt-2">
+                                        <div class="col-auto mr-4 d-flex align-items-center">
+                                            <i class="far fa-clock fa-fw me-1"></i>
+                                            10:00 - {{ "DEFAULT.END" | translate }}
+                                        </div>
+                                        <div class="col-auto d-flex align-items-center">
+                                            <i class="fa fa-map-marker-alt fa-fw me-1"></i>
+                                            <span class="text-muted"><em>{{ "EVENT.NO_LOCATION" | translate }}</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="https://dashboard.wedew.id/events"
+                               class="stretched-link">{{ "EVENT.CHANGE_EVENT" | translate }}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> <!-- end col-->
+    </div> <!-- end col-->
+    <div class="col-xxl-8">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+                <div class="card w-100">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0 fw-bolder">{{ 'COUNTDOWN.CARD_TITLE' | translate }} {{ 'INVITATION.LABEL.WEDDING' | translate }}</h4>
+                    </div>
+                    <app-countdown [date]="data.wedding.date" format="d|h|m|s"></app-countdown>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="alert alert-warning border-0 rounded-0 m-0 d-flex align-items-center"
+                             role="alert">
+                            <i-feather name="alert-triangle" class="text-warning me-2 icon-sm"></i-feather>
+                            <div class="flex-grow-1 text-truncate">
+                                {{ 'PACKAGE.REMINDER.ALERT' | translate }} <b>17</b> {{ 'TIME.DAYS' | translate }}.
+                            </div>
+                            <div class="flex-shrink-0">
+                                <a routerLink="/pages/pricing"
+                                   class="text-reset text-decoration-underline"><b>{{ 'DEFAULT.UPGRADE' | translate }}</b></a>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-end">
+                            <div class="col-sm-8">
+                                <div class="p-3">
+                                    <p class="fs-16 lh-base">
+                                        {{ 'PACKAGE.REMINDER.UPGRADE' | translate }}
+                                        <span class="fw-semibold">{{ 'PACKAGE.FREE.LABEL' | translate }}</span>
+                                    </p>
+                                    <div class="mt-3">
+                                        <a routerLink="/pages/pricing" class="btn btn-success">{{ 'PACKAGE.UPGRADE_ACCOUNT' | translate }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="px-3">
+                                    <img src="assets/images/user-illustarator-2.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card-body-->
+                </div>
+            </div> <!-- end col-->
+        </div> <!-- end row-->
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-animate">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="fw-medium text-muted mb-0">Users</p>
+                                <h2 class="mt-4 ff-secondary cfs-22 fw-semibold">
+                                    <span [countUp]="100" class="counter-value" [options]="option"></span>
+                                    <span>K</span>
+                                </h2>
+                                <p class="mb-0 text-muted text-truncate">
+                                    <span class="badge bg-light text-success mb-0">100 %</span>
+                                    vs. previous month
+                                </p>
+                            </div>
+                            <div>
+                                <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                            <i-feather name="book-open"
+                                                       class="text-info feather-icon-align"></i-feather>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end card body -->
+                </div> <!-- end card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card card-animate">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="fw-medium text-muted mb-0">Users</p>
+                                <h2 class="mt-4 ff-secondary cfs-22 fw-semibold">
+                                    <span [countUp]="100" class="counter-value" [options]="option"></span>
+                                    <span>K</span>
+                                </h2>
+                                <p class="mb-0 text-muted text-truncate">
+                                    <span class="badge bg-light text-success mb-0">100 %</span>
+                                    vs. previous month
+                                </p>
+                            </div>
+                            <div>
+                                <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                            <i-feather name="book-open"
+                                                       class="text-info feather-icon-align"></i-feather>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end card body -->
+                </div> <!-- end card-->
+            </div>
+            <div class="col-md-4">
+                <div class="card card-animate">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="fw-medium text-muted mb-0">Users</p>
+                                <h2 class="mt-4 ff-secondary cfs-22 fw-semibold">
+                                    <span [countUp]="100" class="counter-value" [options]="option"></span>
+                                    <span>K</span>
+                                </h2>
+                                <p class="mb-0 text-muted text-truncate">
+                                    <span class="badge bg-light text-success mb-0">100 %</span>
+                                    vs. previous month
+                                </p>
+                            </div>
+                            <div>
+                                <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                            <i-feather name="book-open"
+                                                       class="text-info feather-icon-align"></i-feather>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end card body -->
+                </div> <!-- end card-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card card-height-100">
+                    <div class="card-header align-items-center d-flex">
+                        <h4 class="card-title mb-0 flex-grow-1">Top Referrals Pages</h4>
+                        <div class="flex-shrink-0">
+                            <button type="button" class="btn btn-soft-primary btn-sm material-shadow-none">
+                                Export Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h6 class="text-muted text-uppercase fw-semibold text-truncate fs-12 mb-3">Total
+                                    Referrals Page
+                                </h6>
+                                <h4 class="fs- mb-0">725,800</h4>
+                                <p class="mb-0 mt-2 text-muted"><span class="badge bg-success-subtle text-success mb-0">
+                                <i class="ri-arrow-up-line align-middle"></i> 15.72 %
+                            </span> vs. previous month</p>
+                            </div><!-- end col -->
+                            <div class="col-6">
+                                <div class="text-center">
+                                    <img src="assets/images/illustrator-1.png" class="img-fluid" alt="">
+                                </div>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                        <div class="mt-3 pt-2">
+                            <div class="progress progress-lg rounded-pill">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%"
+                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 18%"
+                                     aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 22%"
+                                     aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 16%"
+                                     aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 19%"
+                                     aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- end -->
+
+                        <div class="mt-3 pt-2">
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate text-muted fs-14 mb-0"><i
+                                            class="mdi mdi-circle align-middle text-primary me-2"></i>www.google.com</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <p class="mb-0">24.58%</p>
+                                </div>
+                            </div><!-- end -->
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate text-muted fs-14 mb-0"><i
+                                            class="mdi mdi-circle align-middle text-info me-2"></i>www.youtube.com</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <p class="mb-0">17.51%</p>
+                                </div>
+                            </div><!-- end -->
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate text-muted fs-14 mb-0"><i
+                                            class="mdi mdi-circle align-middle text-success me-2"></i>www.meta.com</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <p class="mb-0">23.05%</p>
+                                </div>
+                            </div><!-- end -->
+                            <div class="d-flex mb-2">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate text-muted fs-14 mb-0"><i
+                                            class="mdi mdi-circle align-middle text-warning me-2"></i>www.medium.com</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <p class="mb-0">12.22%</p>
+                                </div>
+                            </div><!-- end -->
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate text-muted fs-14 mb-0"><i
+                                            class="mdi mdi-circle align-middle text-danger me-2"></i>Other</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <p class="mb-0">17.58%</p>
+                                </div>
+                            </div><!-- end -->
+                        </div><!-- end -->
+
+                        <div class="mt-2 text-center">
+                            <a href="javascript:void(0);" class="text-muted text-decoration-underline">Show All</a>
+                        </div>
+
+                    </div><!-- end card body -->
+                </div><!-- end card -->
+            </div><!-- end col -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0 fw-bolder">Need Supports?</h4>
+                    </div>
+                    <div class="card-body">
+                        <div ngbAccordion activeIds="static-1" [closeOthers]="true"
+                             class="custom-accordionwithicon custom-accordion-border accordion-border-box accordion-primary">
+                            <div ngbAccordionItem class="material-shadow" id="static-1">
+                                <div ngbAccordionHeader class="accordion-header border-0 bg-transparent">
+                                    <button ngbAccordionButton>
+                                        How do I set up my profile ?
+                                    </button>
+                                </div>
+                                <div ngbAccordionCollapse>
+                                    <div ngbAccordionBody>
+                                        The renewal of your SlickText service happens on the anniversary of your
+                                        original paid
+                                        sign up date. Upgrading in the middle of your billing period will not change the
+                                        billing
+                                        date. Upgrading does however force an immediate, pro-rated charge to take place
+                                        on your
+                                        account.
+                                    </div>
+                                </div>
+                            </div>
+                            <div ngbAccordionItem class="material-shadow" id="static-2">
+                                <div ngbAccordionHeader class="accordion-header border-0 bg-transparent">
+                                    <button ngbAccordionButton>
+                                        What can I do with my project ?
+                                    </button>
+                                </div>
+                                <div ngbAccordionCollapse>
+                                    <div ngbAccordionBody>
+                                        If you had signed up on a free account with Slicktext, then upgraded to a paid
+                                        plan at a
+                                        later date, your bill will renew based on the date you had upgraded to a paid
+                                        plan. All
+                                        invoices are able to be viewed under your plan options in your SlickText
+                                        account.
+                                    </div>
+                                </div>
+                            </div>
+                            <div ngbAccordionItem class="material-shadow mb-0" id="static-3">
+                                <div ngbAccordionHeader class="accordion-header border-0 bg-transparent">
+                                    <button ngbAccordionButton>
+                                        Where can I go to edit voice settings
+                                    </button>
+                                </div>
+                                <div ngbAccordionCollapse>
+                                    <div ngbAccordionBody>
+                                        No, we cannot provide this information. Opting out from a list is an anonymous,
+                                        private
+                                        act. This prevents further harassment. Providing this information is considered
+                                        bad
+                                        practice, and further communication after they opt out would be considered
+                                        against
+                                        compliance.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end col -->
+</div> <!-- end row-->

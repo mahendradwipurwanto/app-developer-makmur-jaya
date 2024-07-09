@@ -1,0 +1,28 @@
+<div class="card-body text-center justify-content-center d-flex flex-column px-0">
+    <div class="row no-gutters">
+        @if (formatType.day) {
+            <div class="col">
+                <h2 class="mb-0 fw-bolder">{{ countdown.days }}</h2>
+                <p>{{ 'TIME.DAYS' | translate }}</p>
+            </div>
+        }
+        @if (formatType.hour) {
+            <div class="col">
+                <h2 class="mb-0 fw-bolder">{{ countdown.hours }}</h2>
+                <p>{{ 'TIME.HOURS' | translate }}</p>
+            </div>
+        }
+        @if (formatType.minute) {
+            <div class="col">
+                <h2 class="mb-0 fw-bolder">{{ countdown.minutes }}</h2>
+                <p>{{ 'TIME.MINUTES' | translate }}</p>
+            </div>
+        }
+        @if (formatType.second) {
+            <div class="col">
+                <h2 class="mb-0 fw-bolder">{{ countdown.seconds }}</h2>
+                <p>{{ 'TIME.SECONDS' | translate }}</p>
+            </div>
+        }
+    </div>
+</div>

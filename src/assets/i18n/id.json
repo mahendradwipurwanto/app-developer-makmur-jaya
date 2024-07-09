@@ -2,11 +2,153 @@
   "LIGHT": "Terang",
   "DARK": "Gelap",
   "LANGUAGE": "Bahasa",
-  "MENU": "Menu",
-  "DASHBOARD": "Dasbor",
-  "THEME": "Tema",
-  "GUEST": "Tamu",
-  "GUESTBOOK": "Buku Tamu",
-  "DONATION": "Donasi",
-  "SETTINGS": "Pengaturan"
+  "CUSTOM_DOMAIN": "Domain Khusus",
+  "CHANGE_THEME": "Ubah Tema",
+  "AUTH": {
+    "TITLE": "Masuk untuk melanjutkan ke Aweddy.",
+    "SIGN_IN": "Masuk",
+    "SIGN_UP": "Daftar",
+    "SIGN_OUT": "Keluar",
+    "FORGOT_PASSWORD": "Lupa Kata Sandi",
+    "REMEMBER_ME": "Ingat Saya",
+    "OR_SIGN": "atau Masuk dengan",
+    "DONT_HAVE_ACCOUNT": "Belum punya akun?"
+  },
+  "FIELD": {
+    "REQUIRED": "Wajib",
+    "EMAIL": {
+      "LABEL": "Email",
+      "PLACEHOLDER": "Masukkan alamat email Anda",
+      "REQUIRED": "Email wajib diisi",
+      "VALID": "Email harus berupa alamat email yang valid"
+    },
+    "PASSWORD": {
+      "LABEL": "Kata Sandi",
+      "PLACEHOLDER": "Masukkan kata sandi Anda",
+      "REQUIRED": "Kata sandi wajib diisi",
+      "VALID": "Kata sandi harus berupa alamat email yang valid"
+    },
+    "CONFIRM_PASSWORD": {
+      "LABEL": "Konfirmasi Kata Sandi",
+      "PLACEHOLDER": "Masukkan konfirmasi kata sandi Anda",
+      "REQUIRED": "Konfirmasi kata sandi wajib diisi",
+      "VALID": "Konfirmasi kata sandi harus berupa alamat email yang valid"
+    }
+  },
+  "HELP_CENTER": {
+    "HELP": "Bantuan",
+    "CONTACT_US": "Hubungi Kami",
+    "PRIVACY_POLICY": "Kebijakan Privasi",
+    "TERMS_OF_SERVICE": "Syarat dan Ketentuan"
+  },
+  "MENU": {
+    "LABEL": "Menu",
+    "DASHBOARD": "Dasbor",
+    "THEME": "Tema",
+    "GUEST": "Tamu",
+    "GUESTBOOK": "Buku Tamu",
+    "DONATION": "Donasi",
+    "SETTINGS": "Pengaturan"
+  },
+  "SEARCH": {
+    "RECENT_SEARCH": "Pencarian Terbaru",
+    "VIEW_ALL": "Lihat Semua Hasil",
+    "PLACEHOLDER": "Cari..."
+  },
+  "MESSAGE": {
+    "LABEL": "Pesan",
+    "UNREAD": "Pesan Belum Dibaca",
+    "NO_MESSAGE": "Hei! Anda tidak memiliki pesan apapun",
+    "VIEW_ALL": "Lihat Semua Pesan"
+  },
+  "NOTIFICATION": {
+    "LABEL": "Notifikasi",
+    "NO_NOTIFICATION": "Hei! Anda tidak memiliki notifikasi apapun",
+    "VIEW_ALL": "Lihat Semua Notifikasi",
+    "ARE_YOU_SURE": "Apakah Anda yakin?",
+    "DELETE_ALL": "Apakah Anda yakin ingin menghapus notifikasi ini?",
+    "DELETE": "Ya, Hapus!"
+  },
+  "ALERT": {
+    "LABEL": "Peringatan",
+    "NO_ALERT": "Hei! Anda tidak memiliki peringatan apapun",
+    "VIEW_ALL": "Lihat Semua Peringatan"
+  },
+  "PROFILE": {
+    "LABEL": "Profil",
+    "SETTINGS": "Pengaturan"
+  },
+  "DEFAULT": {
+    "LOGO": "Logo",
+    "WELCOME": "Selamat Datang",
+    "SELECT": "Pilih",
+    "RESULT": "Hasil",
+    "NEW": "Baru",
+    "ALL": "Semua",
+    "CLOSE": "Tutup",
+    "REMOVE": "Hapus",
+    "CREATE": "Buat",
+    "UPDATE": "Perbarui",
+    "DELETE": "Hapus",
+    "CANCEL": "Batal",
+    "SAVE": "Simpan",
+    "YES": "Ya",
+    "NO": "Tidak",
+    "EDIT": "Sunting",
+    "CREATE_NEW": "Buat Baru",
+    "UPDATE_DETAILS": "Perbarui Detail",
+    "DELETE_CONFIRM": "Konfirmasi Penghapusan",
+    "INVITATION": {
+      "TOP_BAR": "Undangan Anda",
+      "TYPE": "Jenis Undangan",
+      "DOMAIN": "Domain"
+    },
+    "START": "Mulai",
+    "END": "Selesai",
+    "UPGRADE": "Tingkatkan"
+  },
+  "TIME": {
+    "DAY": "Hari",
+    "DAYS": "Hari",
+    "HOUR": "Jam",
+    "HOURS": "Jam",
+    "MINUTE": "Menit",
+    "MINUTES": "Menit",
+    "SECOND": "Detik",
+    "SECONDS": "Detik"
+  },
+  "PACKAGE": {
+    "UPGRADE_ACCOUNT": "Tingkatkan Akun!",
+    "FREE": {
+      "LABEL": "Gratis"
+    },
+    "REMINDER": {
+      "ALERT": "Masa uji coba gratis Anda berakhir dalam",
+      "UPGRADE": "Tingkatkan rencana Anda dari"
+    }
+  },
+  "COUNTDOWN": {
+    "CARD_TITLE": "Hitung Mundur ke"
+  },
+  "INVITATION": {
+    "CARD": {
+      "CUSTOM_DOMAIN": "Domain Khusus",
+      "CUSTOM_THEME": "Tema Khusus"
+    },
+    "LABEL": {
+      "WEDDING": "Pernikahan",
+      "BIRTHDAY": "Ulang Tahun",
+      "OTHER": "Lainnya"
+    },
+    "TYPE": {
+      "WEDDING": "Undangan Pernikahan",
+      "BIRTHDAY": "Undangan Ulang Tahun",
+      "OTHER": "Undangan Lainnya"
+    }
+  },
+  "EVENT": {
+    "LABEL": "Acara",
+    "CHANGE_EVENT": "Ubah Rangkaian Acara",
+    "NO_LOCATION": "Lokasi belum ditentukan"
+  }
 }

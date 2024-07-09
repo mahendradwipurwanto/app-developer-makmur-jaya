@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {
-    NgbToastModule, NgbProgressbarModule
+    NgbToastModule, NgbAccordionModule
 } from '@ng-bootstrap/ng-bootstrap';
 
 import {FlatpickrModule} from 'angularx-flatpickr';
@@ -27,6 +27,8 @@ import {SharedModule} from "../shared/shared.module";
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AuthGuard} from "../core/guards/auth.guard";
 import {TranslateModule} from "@ngx-translate/core";
+import {FeatherModule} from "angular-feather";
+import {allIcons} from "angular-feather/icons";
 
 
 @NgModule({
@@ -48,6 +50,8 @@ import {TranslateModule} from "@ngx-translate/core";
         SlickCarouselModule,
         LightboxModule,
         TranslateModule,
+        FeatherModule.pick(allIcons),
+        NgbAccordionModule,
     ],
     providers: [AuthGuard],
 })

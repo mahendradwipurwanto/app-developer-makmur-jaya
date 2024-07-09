@@ -1,23 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgbNavModule, NgbAccordionModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgbNavModule, NgbAccordionModule, NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 
 // Swiper Slider
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 // Counter
-import { CountUpModule } from 'ngx-countup';
+import {CountUpModule} from 'ngx-countup';
 
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
 import {TranslateModule} from "@ngx-translate/core";
-
+import {CountdownComponent} from "./countdown/countdown.component";
 
 
 @NgModule({
-  declarations: [
-    BreadcrumbsComponent,
-   
-  ],
+    declarations: [
+        BreadcrumbsComponent,
+        CountdownComponent
+    ],
     imports: [
         CommonModule,
         NgbNavModule,
@@ -27,8 +27,10 @@ import {TranslateModule} from "@ngx-translate/core";
         CountUpModule,
         TranslateModule,
     ],
-  exports: [
-    BreadcrumbsComponent,
-  ]
+    exports: [
+        BreadcrumbsComponent,
+        CountdownComponent
+    ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

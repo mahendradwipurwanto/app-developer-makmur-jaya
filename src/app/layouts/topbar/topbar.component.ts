@@ -169,7 +169,7 @@ export class TopbarComponent implements OnInit {
      */
     signOut() {
         this.tokenService.signOut();
-        this.router.navigate(['/auth/sign-in']);
+        location.reload();
     }
 
     windowScroll() {

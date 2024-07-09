@@ -19,6 +19,7 @@ import {environment} from '../../environments/environment';
 import {AccountRoutingModule} from './account-routing.module';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {SignInComponent} from './sign-in/sign-in.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import {SignInComponent} from './sign-in/sign-in.component';
         AccountRoutingModule,
         NgbToastModule,
         SocialLoginModule,
-        GoogleSigninButtonModule
+        GoogleSigninButtonModule,
+        TranslateModule
     ],
     providers: [
         {
