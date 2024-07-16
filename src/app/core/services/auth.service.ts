@@ -100,8 +100,8 @@ export class AuthenticationService {
      */
     logout() {
         this.store.dispatch(logout());
-        // logout the user
-        // return getFirebaseBackend()!.logout();
+        // sign-out the user
+        // return getFirebaseBackend()!.sign-out();
         sessionStorage.removeItem('currentUser');
         sessionStorage.removeItem('token');
         this.currentUserSubject.next(null!);

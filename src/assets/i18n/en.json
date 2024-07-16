@@ -3,7 +3,7 @@
   "DARK": "Dark",
   "LANGUAGE": "Language",
   "CUSTOM_DOMAIN": "Custom Domain",
-  "CHANGE_THEME": "Change Theme",
+  "ADJUST_THEME": "Adjust Theme",
   "AUTH": {
     "TITLE": "Sign in to continue to Aweddy.",
     "SIGN_IN": "Sign In",
@@ -150,5 +150,44 @@
     "LABEL": "Event",
     "CHANGE_EVENT": "Change Event Sessions",
     "NO_LOCATION": "Location not yet defined"
+  },
+  "QUOTA": {
+    "GUEST": "Guest Quota",
+    "WHATSAPP": "Whatsapp Messenger Quota",
+    "EMAIL": "Email Quota"
+  },
+  "GUEST_STATISTIK": {
+    "LABEL": "Guest Statistik",
+    "TOTAL": "Total Guest",
+    "PENDING": "Pending",
+    "INVITED": "Invited",
+    "ATTENDING": "Attending",
+    "NOT_ATTENDING": "Not Attending",
+    "NO_RESPONSE": "No Response"
+  },
+  "NEED_SUPPORT": {
+    "LABEL": "Need Support?"
+  },
+  "SETTINGS": {
+    "INFORMATION": {
+      "LABEL": "Information",
+      "DESC": "Manage your event information"
+    },
+    "EVENT": {
+      "LABEL": "Event",
+      "DESC": "Manage your event details"
+    },
+    "GALLERY": {
+      "LABEL": "Gallery",
+      "DESC": "Manage your event gallery"
+    },
+    "QR_CODE": {
+      "LABEL": "QR Code",
+      "DESC": "Manage your event QR Code"
+    },
+    "NOTIFICATION": {
+      "LABEL": "Notification",
+      "DESC": "Manage your event notification"
+    }
   }
 }

@@ -55,7 +55,8 @@ export function createTranslateLoader(http: HttpClient): any {
         BrowserModule,
         AppRoutingModule,
         LayoutsModule,
-        PagesModule], providers: [
+        PagesModule
+    ], providers: [
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true},

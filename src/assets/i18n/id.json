@@ -3,7 +3,7 @@
   "DARK": "Gelap",
   "LANGUAGE": "Bahasa",
   "CUSTOM_DOMAIN": "Domain Khusus",
-  "CHANGE_THEME": "Ubah Tema",
+  "ADJUST_THEME": "Atur Tema",
   "AUTH": {
     "TITLE": "Masuk untuk melanjutkan ke Aweddy.",
     "SIGN_IN": "Masuk",
@@ -150,5 +150,44 @@
     "LABEL": "Acara",
     "CHANGE_EVENT": "Ubah Rangkaian Acara",
     "NO_LOCATION": "Lokasi belum ditentukan"
+  },
+  "QUOTA": {
+    "GUEST": "Kuota Tamu",
+    "WHATSAPP": "Kuota WhatsApp",
+    "EMAIL": "Kuota Email"
+  },
+  "GUEST_STATISTIK": {
+    "LABEL": "Statistik Tamu",
+    "TOTAL": "Total Tamu",
+    "PENDING": "Menunggu",
+    "INVITED": "Diundang",
+    "ATTENDING": "Hadir",
+    "NOT_ATTENDING": "Tidak Hadir",
+    "NO_RESPONSE": "Tidak Merespon"
+  },
+  "NEED_SUPPORT": {
+    "LABEL": "Butuh Bantuan?"
+  },
+  "SETTINGS": {
+    "INFORMATION": {
+      "LABEL": "Informasi",
+      "DESC": "Atur informasi Anda"
+    },
+    "EVENT": {
+      "LABEL": "Acara",
+      "DESC": "Atur detail acara Anda"
+    },
+    "GALLERY": {
+      "LABEL": "Galeri",
+      "DESC": "Atur galeri acara Anda"
+    },
+    "QR_CODE": {
+      "LABEL": "Kode QR",
+      "DESC": "Atur kode QR acara Anda"
+    },
+    "NOTIFICATION": {
+      "LABEL": "Notifikasi",
+      "DESC": "Atur notifikasi acara Anda"
+    }
   }
 }

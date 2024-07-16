@@ -1,9 +1,13 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {
     NgbToastModule, NgbAccordionModule
 } from '@ng-bootstrap/ng-bootstrap';
+
+// Load Icons
+import {defineElement} from 'lord-icon-element';
+import lottie from 'lottie-web';
 
 import {FlatpickrModule} from 'angularx-flatpickr';
 import {CountUpModule} from 'ngx-countup';
@@ -17,10 +21,6 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 import {LightboxModule} from 'ngx-lightbox';
 
-// Load Icons
-import {defineElement} from 'lord-icon-element';
-import lottie from 'lottie-web';
-
 // Pages Routing
 import {PagesRoutingModule} from "./pages-routing.module";
 import {SharedModule} from "../shared/shared.module";
@@ -29,11 +29,19 @@ import {AuthGuard} from "../core/guards/auth.guard";
 import {TranslateModule} from "@ngx-translate/core";
 import {FeatherModule} from "angular-feather";
 import {allIcons} from "angular-feather/icons";
+import {SettingsComponent} from "./settings/settings.component";
+import {ThemeComponent} from "./theme/theme.component";
+import {GuestBookComponent} from "./guest-book/guest-book.component";
+import {DonationComponent} from "./donation/donation.component";
 
 
 @NgModule({
     declarations: [
-        DashboardComponent
+        DashboardComponent,
+        ThemeComponent,
+        GuestBookComponent,
+        DonationComponent,
+        SettingsComponent
     ],
     imports: [
         CommonModule,
@@ -54,6 +62,7 @@ import {allIcons} from "angular-feather/icons";
         NgbAccordionModule,
     ],
     providers: [AuthGuard],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PagesModule {
     constructor() {

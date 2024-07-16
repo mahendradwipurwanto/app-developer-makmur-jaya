@@ -4,22 +4,21 @@ import {Routes, RouterModule} from '@angular/router';
 // Component Pages
 import {SignUpComponent} from "./sign-up/sign-up.component";
 import {SignInComponent} from "./sign-in/sign-in.component";
+import {ResetPasswordComponent} from "./auth/reset-password/reset-password.component";
+import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
 
 const routes: Routes = [
     {
-        path: 'pass-reset',
-        loadChildren: () => import('./auth/pass-reset/pass-reset.module').then(m => m.PassResetModule)
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
     },
     {
-        path: 'pass-create',
-        loadChildren: () => import('./auth/pass-create/pass-create.module').then(m => m.PassCreateModule)
+        path: 'reset-password',
+        component: ResetPasswordComponent
     },
     {
         path: 'lockscreen',
         loadChildren: () => import('./auth/lockscreen/lockscreen.module').then(m => m.LockscreenModule)
-    },
-    {
-        path: 'logout', loadChildren: () => import('./auth/logout/logout.module').then(m => m.LogoutModule)
     },
     {
         path: 'success-msg',

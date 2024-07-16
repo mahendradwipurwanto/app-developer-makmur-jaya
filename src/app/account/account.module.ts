@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
@@ -16,15 +16,23 @@ import {ToastsContainer} from './sign-in/toasts-container.component';
 // called environment.ts
 import {environment} from '../../environments/environment';
 
+import {defineElement} from "lord-icon-element";
+import lottie from "lottie-web";
+
 import {AccountRoutingModule} from './account-routing.module';
+import {TranslateModule} from "@ngx-translate/core";
+
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {SignInComponent} from './sign-in/sign-in.component';
-import {TranslateModule} from "@ngx-translate/core";
+import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
+import {ResetPasswordComponent} from "./auth/reset-password/reset-password.component";
 
 @NgModule({
     declarations: [
         SignUpComponent,
         SignInComponent,
+        ForgotPasswordComponent,
+        ResetPasswordComponent,
         ToastsContainer
     ],
     imports: [
@@ -61,6 +69,10 @@ import {TranslateModule} from "@ngx-translate/core";
             } as SocialAuthServiceConfig,
         }
     ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AccountModule {
+    constructor() {
+        defineElement(lottie.loadAnimation);
+    }
 }

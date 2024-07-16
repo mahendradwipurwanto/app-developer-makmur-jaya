@@ -1,1 +1,51 @@
-<p>theme works!</p>
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="{{ 'MENU.THEME' | translate}}" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-lg-4">
+        <div class="card ribbon-box border shadow-none mb-lg-0 material-shadow">
+            <div class="ribbon ribbon-primary round-shape fw-semibold">{{ data.invitation.type | translate }}</div>
+            <div class="card-overlay-image overflow-hidden">
+                <img class="card-img-top img-fluid"
+                     src="{{ data.invitation.image | translate }}"
+                     alt="Card image cap">
+                <h5 class="overlay-text mb-0"><i
+                        class="ri-checkbox-blank-circle-fill text-success me-2"></i> {{ data.invitation.domain | translate }}
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group">
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                        <div class="float-end">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="ri-global-fill"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="list-title fs-15 mb-1">{{ "CUSTOM_DOMAIN" | translate }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                        <div class="float-end">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="ri-paint-brush-line"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="list-title fs-15 mb-1">{{ "ADJUST_THEME" | translate }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-8 col-lg-8">
+
+    </div>
+</div>

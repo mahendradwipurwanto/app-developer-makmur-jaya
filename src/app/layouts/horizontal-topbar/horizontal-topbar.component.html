@@ -129,7 +129,8 @@
 
                                 </div>
                             } @else {
-                                <a [routerLink]="item.link" class="side-nav-link-ref nav-link menu-link 123">
+                                <a [routerLink]="item.link" class="side-nav-link-ref nav-link menu-link 123"
+                                   (click)="updateActive($event)">
                                     @if (item.icon) {
                                         <i class="bx {{ item.icon }} icon nav-icon"></i>
                                     }

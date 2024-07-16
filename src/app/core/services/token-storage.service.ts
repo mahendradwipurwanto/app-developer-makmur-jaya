@@ -10,23 +10,25 @@ export class TokenStorageService {
     constructor() {
     }
 
-    public signOut(): void {
-        window.sessionStorage.clear();
-        window.sessionStorage.removeItem(USER_KEY);
-        window.sessionStorage.removeItem(TOKEN_KEY);
+    public signOut(): Promise<boolean> {
+        return new Promise((resolve, reject) => {
+            localStorage.removeItem(USER_KEY);
+            localStorage.removeItem(TOKEN_KEY);
+            resolve(true);
+        });
     }
 
     public saveToken(token: string): void {
-        window.sessionStorage.removeItem(TOKEN_KEY);
-        window.sessionStorage.setItem(TOKEN_KEY, token);
+        localStorage.removeItem(TOKEN_KEY);
+        localStorage.setItem(TOKEN_KEY, token);
     }
 
     public getToken(): string | null {
-        return sessionStorage.getItem('token');
+        return localStorage.getItem('token');
     }
 
     public saveUser(user: any): void {
-        window.sessionStorage.removeItem(USER_KEY);
+        localStorage.removeItem(USER_KEY);
 
         user.picture = user.provider === 'FACEBOOK' ? user.response.picture.data.url :
             user.provider === 'GOOGLE' ? user.photoUrl : user.profile;
@@ -40,11 +42,11 @@ export class TokenStorageService {
             picture: user.picture
         };
 
-        window.sessionStorage.setItem(USER_KEY, JSON.stringify(userData));
+        localStorage.setItem(USER_KEY, JSON.stringify(userData));
     }
 
     public getUser(): any {
-        const user = window.sessionStorage.getItem(USER_KEY);
+        const user = localStorage.getItem(USER_KEY);
         if (user) {
             return JSON.parse(user);
         }

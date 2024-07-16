@@ -3,9 +3,6 @@ import {DOCUMENT} from '@angular/common';
 import {EventService} from '../../core/services/event.service';
 
 //Logout
-import {environment} from '../../../environments/environment';
-import {AuthenticationService} from '../../core/services/auth.service';
-import {AuthfakeauthenticationService} from '../../core/services/authfake.service';
 import {Router} from '@angular/router';
 import {TokenStorageService} from '../../core/services/token-storage.service';
 
@@ -168,8 +165,11 @@ export class TopbarComponent implements OnInit {
      * Logout the user
      */
     signOut() {
-        this.tokenService.signOut();
-        location.reload();
+        // if this.tokenService.signOut()
+        this.tokenService.signOut().then(() => {
+            //reload the page
+            window.location.reload();
+        });
     }
 
     windowScroll() {

@@ -22,7 +22,7 @@ export const MENU: MenuItem[] = [
         id: 4,
         label: 'MENU.GUESTBOOK',
         icon: 'ri-book-open-line',
-        link: '/guest',
+        link: '/guest-book',
     },
     {
         id: 5,
