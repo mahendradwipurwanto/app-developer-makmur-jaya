@@ -2,38 +2,36 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-cover',
-  templateUrl: './cover.component.html',
-  styleUrls: ['./cover.component.scss']
+  selector: 'app-page404',
+  templateUrl: './recovery-password.component.html',
+  styleUrls: ['./recovery-password.component.scss']
 })
 
 /**
- * Cover Component
+ * Basic Component
  */
-export class CoverComponent implements OnInit {
+export class RecoveryPasswordComponent implements OnInit {
 
-  // Login Form
-  loginForm!: UntypedFormGroup;
-  submitted = false;
-  passwordField!: boolean;
-  confirmField!: boolean;
-  error = '';
-  returnUrl!: string;
-  // set the current year
-  year: number = new Date().getFullYear();
-  // Carousel navigation arrow show
-  showNavigationArrows: any;
-
-  constructor(private formBuilder: UntypedFormBuilder) { }
-
-  ngOnInit(): void {
-    /**
-     * Form Validatyion
-     */
-     this.loginForm = this.formBuilder.group({
-      password: ['', [Validators.required]],
-      cpassword: ['', Validators.required],
-    });
+   // Login Form
+   passresetForm!: UntypedFormGroup;
+   submitted = false;
+   passwordField!: boolean;
+   confirmField!: boolean;
+   error = '';
+   returnUrl!: string;
+   // set the current year
+   year: number = new Date().getFullYear();
+ 
+   constructor(private formBuilder: UntypedFormBuilder) { }
+ 
+   ngOnInit(): void {
+     /**
+      * Form Validatyion
+      */
+      this.passresetForm = this.formBuilder.group({
+       password: ['', [Validators.required]],
+       cpassword: ['', [Validators.required]]
+     });
 
       // Password Validation set
       var myInput = document.getElementById("password-input") as HTMLInputElement;
@@ -95,35 +93,36 @@ export class CoverComponent implements OnInit {
             length?.classList.add("invalid");
         }
       };
-  }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+   }
+ 
+   // convenience getter for easy access to form fields
+   get f() { return this.passresetForm.controls; }
+ 
+   /**
+    * Form submit
+    */
+    onSubmit() {
+     this.submitted = true;
+ 
+     // stop here if form is invalid
+     if (this.passresetForm.invalid) {
+       return;
+     }
+   }
 
-  /**
-   * Form submit
-   */
-   onSubmit() {
-    this.submitted = true;
-
-    // stop here if form is invalid
-    if (this.loginForm.invalid) {
-      return;
-    }
-  }
-
-  /**
+   /**
    * Password Hide/Show
    */
-   togglepasswordField() {
-    this.passwordField = !this.passwordField;
-  }
+    togglepasswordField() {
+      this.passwordField = !this.passwordField;
+    }
 
-  /**
- * Password Hide/Show
- */
-  toggleconfirmField() {
-    this.confirmField = !this.confirmField;
-  }
+    /**
+   * Password Hide/Show
+   */
+    toggleconfirmField() {
+      this.confirmField = !this.confirmField;
+    }
 
 }

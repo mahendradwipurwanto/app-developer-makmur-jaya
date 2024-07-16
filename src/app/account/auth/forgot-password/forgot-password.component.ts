@@ -3,14 +3,14 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 
 @Component({
   selector: 'app-page404',
-  templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.scss']
+  templateUrl: './recovery-password.component.html',
+  styleUrls: ['./recovery-password.component.scss']
 })
 
 /**
  * Pass-Reset Basic Component
  */
-export class BasicComponent implements OnInit {
+export class RecoveryPasswordComponent implements OnInit {
 
   // Login Form
   passresetForm!: UntypedFormGroup;
