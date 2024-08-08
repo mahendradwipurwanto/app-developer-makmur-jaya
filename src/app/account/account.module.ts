@@ -57,10 +57,6 @@ import {ResetPasswordComponent} from "./auth/reset-password/reset-password.compo
                         provider: new GoogleLoginProvider(
                             environment.google_client_id
                         )
-                    },
-                    {
-                        id: FacebookLoginProvider.PROVIDER_ID,
-                        provider: new FacebookLoginProvider(environment.facebook_app_id)
                     }
                 ],
                 onError: (err) => {

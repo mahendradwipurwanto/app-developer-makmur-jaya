@@ -4,8 +4,7 @@
 
 export const environment = {
     production: false,
-    google_client_id: '75314287440-eb60cvuejo1kta3o5p5m2crj2b3q3iv3.apps.googleusercontent.com',
-    facebook_app_id: '1744368446101227',
+    google_client_id: '600954802178-t9fjhfl4guhr09lpcee171tle0eas9ja.apps.googleusercontent.com',
 };
 
 /*

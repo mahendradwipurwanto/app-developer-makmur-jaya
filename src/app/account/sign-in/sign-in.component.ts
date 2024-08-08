@@ -75,10 +75,6 @@ export class SignInComponent implements OnInit {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
-    signInWithFB(): void {
-        this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-    }
-
     // convenience getter for easy access to form fields
     get f() {
         return this.loginForm.controls;

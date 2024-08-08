@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Ngodingin": {
+    "DeveloperMakmurJaya": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Ngodingin",
+            "outputPath": "dist/developer-makmur-jaya",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -140,10 +140,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Ngodingin:build:production"
+              "buildTarget": "DeveloperMakmurJaya:build:production"
             },
             "development": {
-              "buildTarget": "Ngodingin:build:development"
+              "buildTarget": "DeveloperMakmurJaya:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -151,7 +151,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Ngodingin:build"
+            "buildTarget": "DeveloperMakmurJaya:build"
           }
         },
         "test": {
