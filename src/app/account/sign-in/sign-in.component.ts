@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 
-import {FacebookLoginProvider, SocialAuthService} from "@abacritt/angularx-social-login";
+import {SocialAuthService} from "@abacritt/angularx-social-login";
 import {SocialUser} from "@abacritt/angularx-social-login";
 
 // Login Auth
