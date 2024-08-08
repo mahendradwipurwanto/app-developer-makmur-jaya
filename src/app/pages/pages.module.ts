@@ -1,8 +1,7 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {
-    NgbToastModule, NgbAccordionModule
+    NgbToastModule, NgbAccordionModule, NgbCollapseModule
 } from '@ng-bootstrap/ng-bootstrap';
 
 // Load Icons
@@ -15,6 +14,7 @@ import {NgApexchartsModule} from 'ng-apexcharts';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 import {SimplebarAngularModule} from 'simplebar-angular';
+import { CommonModule } from '@angular/common';
 
 // Swiper Slider
 import {SlickCarouselModule} from 'ngx-slick-carousel';
@@ -60,6 +60,7 @@ import {DonationComponent} from "./donation/donation.component";
         TranslateModule,
         FeatherModule.pick(allIcons),
         NgbAccordionModule,
+        NgbCollapseModule,
     ],
     providers: [AuthGuard],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]

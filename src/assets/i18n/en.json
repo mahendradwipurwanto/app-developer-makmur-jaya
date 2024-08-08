@@ -185,9 +185,16 @@
       "LABEL": "QR Code",
       "DESC": "Manage your event QR Code"
     },
+    "DOMAIN": {
+      "LABEL": "Domain",
+      "DESC": "Manage your event domain"
+    },
     "NOTIFICATION": {
       "LABEL": "Notification",
       "DESC": "Manage your event notification"
     }
+  },
+  "THEME": {
+    "CHANGE_THEME": "Change Theme"
   }
 }

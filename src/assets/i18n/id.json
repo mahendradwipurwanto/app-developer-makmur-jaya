@@ -185,9 +185,16 @@
       "LABEL": "Kode QR",
       "DESC": "Atur kode QR acara Anda"
     },
+    "DOMAIN": {
+      "LABEL": "Domain",
+      "DESC": "Atur domain Anda"
+    },
     "NOTIFICATION": {
       "LABEL": "Notifikasi",
       "DESC": "Atur notifikasi acara Anda"
     }
+  },
+  "THEME": {
+    "CHANGE_THEME": "Ubah Tema"
   }
 }

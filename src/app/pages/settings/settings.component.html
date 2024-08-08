@@ -38,26 +38,6 @@
                             <div class="flex-grow-1">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0 avatar-xs">
-                                        <div class="avatar-title bg-secondary-subtle text-secondary rounded">
-                                            <i class="ri-calendar-todo-line"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex-shrink-0 ms-2">
-                                        <h6 class="fs-14 mb-0">Expired date</h6>
-                                        <small class="text-muted">This package will active until</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <span class="badge bg-secondary fs-6">Forever</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 avatar-xs">
                                         <div class="avatar-title bg-success-subtle text-success rounded">
                                             <i class="ri-money-dollar-box-line"></i>
                                         </div>
@@ -70,6 +50,26 @@
                             </div>
                             <div class="flex-shrink-0">
                                 <span class="badge bg-success fs-6">FREE</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 avatar-xs">
+                                        <div class="avatar-title bg-secondary-subtle text-secondary rounded">
+                                            <i class="ri-calendar-todo-line"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <h6 class="fs-14 mb-0">Expired date</h6>
+                                        <small class="text-muted">This package will active until</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="badge bg-secondary fs-6">Forever</span>
                             </div>
                         </div>
                     </li>
@@ -155,6 +155,22 @@
                             <h5 class="mt-4">{{ 'SETTINGS.QR_CODE.LABEL' | translate }}</h5>
                         </a>
                         <p class="text-muted mb-0">{{ 'SETTINGS.QR_CODE.DESC' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 mb-3 d-flex align-items-stretch">
+                <div class="card w-100">
+                    <div class="card-body text-center py-4">
+                        <lord-icon src="https://cdn.lordicon.com/trkmlure.json"
+                                   trigger="loop"
+                                   delay="500"
+                                   colors="primary:#121331,secondary:#66a1ee"
+                                   style="width:75px;height:75px">
+                        </lord-icon>
+                        <a href="javascript:void(0);" class="stretched-link">
+                            <h5 class="mt-4">{{ 'SETTINGS.DOMAIN.LABEL' | translate }}</h5>
+                        </a>
+                        <p class="text-muted mb-0">{{ 'SETTINGS.DOMAIN.DESC' | translate }}</p>
                     </div>
                 </div>
             </div>
