@@ -14,12 +14,18 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 3,
-        label: 'MENU.PROJECT',
-        icon: 'ri-paint-brush-line',
-        link: '/theme',
+        label: 'MENU.TEAMS',
+        icon: 'ri-team-line',
+        link: '/teams',
     },
     {
-        id: 6,
+        id: 4,
+        label: 'MENU.PROJECTS',
+        icon: 'ri-function-line',
+        link: '/projects',
+    },
+    {
+        id: 5,
         label: 'MENU.SETTINGS',
         icon: 'ri-settings-line',
         link: '/settings',

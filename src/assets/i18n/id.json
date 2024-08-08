@@ -44,7 +44,8 @@
   "MENU": {
     "LABEL": "Menu",
     "DASHBOARD": "Dasbor",
-    "PROJECT": "Project",
+    "TEAMS": "Tim",
+    "PROJECTS": "Project",
     "SETTINGS": "Pengaturan"
   },
   "SEARCH": {

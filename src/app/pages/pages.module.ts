@@ -14,7 +14,7 @@ import {NgApexchartsModule} from 'ng-apexcharts';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 import {SimplebarAngularModule} from 'simplebar-angular';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 
 // Swiper Slider
 import {SlickCarouselModule} from 'ngx-slick-carousel';
@@ -30,11 +30,15 @@ import {TranslateModule} from "@ngx-translate/core";
 import {FeatherModule} from "angular-feather";
 import {allIcons} from "angular-feather/icons";
 import {SettingsComponent} from "./settings/settings.component";
+import {TeamsComponent} from "./teams/teams.component";
+import {ProjectsComponent} from "./projects/projects.component";
 
 
 @NgModule({
     declarations: [
         DashboardComponent,
+        TeamsComponent,
+        ProjectsComponent,
         SettingsComponent
     ],
     imports: [

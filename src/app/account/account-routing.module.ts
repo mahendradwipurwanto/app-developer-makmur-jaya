@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 // Component Pages
-import {SignUpComponent} from "./sign-up/sign-up.component";
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {ResetPasswordComponent} from "./auth/reset-password/reset-password.component";
 import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
@@ -26,10 +25,6 @@ const routes: Routes = [
     },
     {
         path: 'twostep', loadChildren: () => import('./auth/twostep/twostep.module').then(m => m.TwostepModule)
-    },
-    {
-        path: "sign-up",
-        component: SignUpComponent
     },
     {
         path: "sign-in",

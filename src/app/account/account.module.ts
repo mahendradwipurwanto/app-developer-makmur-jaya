@@ -5,8 +5,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import {SocialLoginModule, SocialAuthServiceConfig, GoogleSigninButtonModule} from '@abacritt/angularx-social-login';
 import {
-    GoogleLoginProvider,
-    FacebookLoginProvider
+    GoogleLoginProvider
 } from '@abacritt/angularx-social-login';
 
 import {NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
@@ -22,14 +21,12 @@ import lottie from "lottie-web";
 import {AccountRoutingModule} from './account-routing.module';
 import {TranslateModule} from "@ngx-translate/core";
 
-import {SignUpComponent} from './sign-up/sign-up.component';
 import {SignInComponent} from './sign-in/sign-in.component';
 import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
 import {ResetPasswordComponent} from "./auth/reset-password/reset-password.component";
 
 @NgModule({
     declarations: [
-        SignUpComponent,
         SignInComponent,
         ForgotPasswordComponent,
         ResetPasswordComponent,
