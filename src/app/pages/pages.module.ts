@@ -30,17 +30,11 @@ import {TranslateModule} from "@ngx-translate/core";
 import {FeatherModule} from "angular-feather";
 import {allIcons} from "angular-feather/icons";
 import {SettingsComponent} from "./settings/settings.component";
-import {ThemeComponent} from "./theme/theme.component";
-import {GuestBookComponent} from "./guest-book/guest-book.component";
-import {DonationComponent} from "./donation/donation.component";
 
 
 @NgModule({
     declarations: [
         DashboardComponent,
-        ThemeComponent,
-        GuestBookComponent,
-        DonationComponent,
         SettingsComponent
     ],
     imports: [

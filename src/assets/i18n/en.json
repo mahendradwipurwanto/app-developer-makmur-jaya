@@ -44,10 +44,7 @@
   "MENU": {
     "LABEL": "Menu",
     "DASHBOARD": "Dashboard",
-    "THEME": "Theme",
-    "GUEST": "Guest",
-    "GUESTBOOK": "Guest Book",
-    "DONATION": "Donation",
+    "PROJECT": "Project",
     "SETTINGS": "Settings"
   },
   "SEARCH": {

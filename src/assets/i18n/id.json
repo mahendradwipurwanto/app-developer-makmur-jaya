@@ -44,10 +44,7 @@
   "MENU": {
     "LABEL": "Menu",
     "DASHBOARD": "Dasbor",
-    "THEME": "Tema",
-    "GUEST": "Tamu",
-    "GUESTBOOK": "Buku Tamu",
-    "DONATION": "Donasi",
+    "PROJECT": "Project",
     "SETTINGS": "Pengaturan"
   },
   "SEARCH": {
